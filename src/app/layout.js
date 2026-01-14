@@ -1,6 +1,7 @@
 import { DM_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/Components/Shared/NavBar/NavBar";
+import Footer from "@/Components/Shared/Footer/Footer";
 const dmSans = DM_Sans({
   subsets: ["latin"],
   variable: "--font-dm-sans",
@@ -28,6 +29,8 @@ export default function RootLayout({ children }) {
         <NavBar/>
         
         {children}
+
+        <Footer/>
       </body>
     </html>
   );

@@ -11,7 +11,7 @@ const StatsCard = ({ stat }) => {
         height={64}
         className="mx-auto "
       />
-      <h2 className={`${stat.titleColor} mt-6 mb-3 text-2xl md:text-3xl font-semibold md:font-bold lg:text-5xl`}>
+      <h2 className={`${stat.titleColor} mt-6 mb-3 text-2xl md:text-3xl font-semibold font-bold lg:text-5xl`}>
         {stat.title}
       </h2>
       <p className=" text-sm text-[#65758B] font-regular">
