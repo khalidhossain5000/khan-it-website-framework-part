@@ -12,7 +12,7 @@ const ServicesCard = ({service}) => {
             height={56}
             className='mx-auto md:mx-0'
             />
-            <h2 className=' mt-6 mb-3 text-xl md:text-2xl font-semibold'>{service.title}</h2>
+            <h2 className='text-text-primary mt-6 mb-3 text-xl md:text-2xl font-semibold'>{service.title}</h2>
             <p className=' text-sm md:text-[16px] text-[#65758B] font-regular'>{service.description}</p>
         </div>
     );
