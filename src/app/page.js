@@ -1,4 +1,5 @@
 import Banner from '@/Components/Home/Banner/Banner';
+import TrustSection from '@/Components/Home/T';
 import React from 'react';
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
     <div>
 
       <Banner/>
+      <TrustSection/>
     </div>
   );
 };
