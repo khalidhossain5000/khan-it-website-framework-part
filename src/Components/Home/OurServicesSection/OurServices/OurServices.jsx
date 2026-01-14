@@ -4,7 +4,7 @@ import servicesData from '../ServicesData'
 import ServicesCard from "../ServicesCard/ServicesCard";
 const OurServices = () => {
   return (
-    <section className="py-30 bg-[#ffffff] px-2 lg:px-4">
+    <section className="py-6 lg:py-30 bg-[#ffffff] px-2 lg:px-4">
       <div className="container mx-auto ">
        <div className="text-center">
          <p className="bg-[#F0F7FF] py-2 px-4 rounded-4xl text-primary text-sm font-medium inline-block">

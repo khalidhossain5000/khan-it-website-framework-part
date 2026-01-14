@@ -33,7 +33,7 @@ const statsData = [
 ];
 const Banner = () => {
   return (
-    <section className="h-screen bg-cover bg-center py-40 lg:py-48 px-2 lg:px-4"   style={{
+    <section className="min-h-screen bg-cover bg-center pt-40 pb-24 md:py-40 md:pt-0 lg:py-48  px-2 lg:px-4"   style={{
     backgroundImage: `url(${bgImg.src})`,
   }}>
       <div className="container mx-auto flex flex-col justify-between lg:flex-row items-center gap-14">
