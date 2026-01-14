@@ -33,38 +33,41 @@ const statsData = [
 ];
 const Banner = () => {
   return (
-    <section className="h-screen bg-cover bg-center py-48"   style={{
+    <section className="h-screen bg-cover bg-center py-40 lg:py-48 px-2 lg:px-4"   style={{
     backgroundImage: `url(${bgImg.src})`,
   }}>
       <div className="container mx-auto flex flex-col justify-between lg:flex-row items-center gap-14">
         {/* right side ttitle and usbtitle container */}
-        <div className="title-subtitle lg:flex-1 ">
+        <div className="title-subtitle lg:flex-1 text-center lg:text-left">
           <div className="titles relative">
-            <h1 className="text-2xl xl:text-[80px] font-dmSans font-bold lg:font-extrabold text-[#060606]">
+            <h1 className="text-4xl md:text-6xl lg:text-5xl xl:text-[80px] font-dmSans font-bold lg:font-extrabold text-[#060606]">
               Digital Marketing Agency in Bangladesh
             </h1>
-            <img src={titleShape.src} alt="title-shape-frame" className="absolute -top-2 right-6"/>
+            <img src={titleShape.src} alt="title-shape-frame" className="hidden lg:absolute -top-2 right-6"/>
           </div>
-          <p className="text-[#65758B] font-normal font-inter text-lg max-w-2xl py-6 mb-5">
+          <p className="text-[#65758B] font-normal font-inter text-sm xl:text-lg max-w-2xl py-6 mb-2 lg:mb-5 mx-auto lg:mx-0">
             Khan IT (led by SEO expert Md Faruk Khan) helps businesses get 150%
             more leads and 2.5x higher conversions through integrated digital
             marketing and web design.
           </p>
-          <Button className={`text-lg `}>Book Your Free Consultation</Button>
+          <div className="text-center">
+            <Button className={`text-lg mx-auto lg:mx-0`}>Book Your Free Consultation</Button>
+          </div>
         </div>
         {/* left side card container */}
         <div className="card-container lg:flex-1">
           {/* card1 and two contaienr */}
-          <div className="card-icontainer flex gap-6 items-center">
+          <div className="card-icontainer lg:flex gap-6 items-center">
             {/* cardi */}
-            <div className="cardi self-start bg-linear-to-br from-[#eaedff] to-[#f9effb] p-6 rounded-3xl border border-[#B4D5F9] space-y-2 flex-1">
+            <div className="cardi self-start bg-linear-to-br from-[#eaedff] to-[#f9effb] p-6 rounded-3xl border border-[#B4D5F9] space-y-2 lg:flex-1 text-center lg:text-left">
               <Image
                 src={rocketImg}
                 alt="Rocket image"
                 width={50}
                 height={50}
+                className="mx-auto lg:mx-0"
               />
-              <div className="text and icon flex items-center pt-2 xl:pt-4">
+              <div className="text and icon flex items-center justify-center lg:justify-start pt-2 xl:pt-4">
                 <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-text-primary font-bold">
                   200%
                 </h2>
@@ -79,13 +82,13 @@ const Banner = () => {
             </div>
 
             {/* card-ii */}
-            <div className="relative  flex-1 cardii bg-linear-to-br from-[#C4DBF5] to-[#ECF1F8] p-6 rounded-3xl border border-[#B4D5F9] translate-y-9 mb-6">
-              <h2 className="text-lg font-bold text-text-primary">
+            <div className="relative  flex-1 cardii bg-linear-to-br from-[#C4DBF5] to-[#ECF1F8] p-6 rounded-3xl border border-[#B4D5F9] lg:translate-y-9 mb-6 mt-6 lg:mt-0">
+              <h2 className="text-lg font-bold text-text-primary text-center lg:text-left">
                 Our Track Record
               </h2>
 
               <div className="shape bg-[#dae7f6] absolute top-0 right-0 rounded-3xl">
-                <Image src={shape} alt="walton logo" width={90} height={50} />
+                <Image src={shape} alt="walton logo" width={90} height={50} className="w-18 lg:w-22"/>
               </div>
               {/* list- */}
 
@@ -108,9 +111,9 @@ const Banner = () => {
             </div>
           </div>
           {/* card 3 and 4 container */}
-          <div className="card-3-4-conatiner flex items-center gap-6">
+          <div className="card-3-4-conatiner lg:flex items-center gap-6">
             {/* card-iii */}
-            <div className="cardiii flex-1 -translate-y-22">
+            <div className="cardiii flex-1 lg:-translate-y-22">
               <VideoPlayCard />
             </div>
 
