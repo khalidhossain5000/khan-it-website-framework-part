@@ -13,6 +13,7 @@ import quoteImg from "../../../assets/banner/backtick.png";
 import { FiTarget } from "react-icons/fi";
 import { BsLightningCharge } from "react-icons/bs";
 import shape from "../../../assets/banner/track-record-card-shape.png";
+import bgImg from '../../../assets/banner/section-bg.png'
 const statsData = [
   {
     icon: <FiUsers size={30} />,
@@ -32,23 +33,27 @@ const statsData = [
 ];
 const Banner = () => {
   return (
-    <section className="py-36">
+    <section className="h-screen bg-cover bg-center py-48"   style={{
+    backgroundImage: `url(${bgImg.src})`,
+  }}>
       <div className="container mx-auto flex flex-col justify-between lg:flex-row items-center gap-14">
-        <div className="title-subtitle flex-1">
-          <div className="titles">
+        {/* right side ttitle and usbtitle container */}
+        <div className="title-subtitle lg:flex-1 ">
+          <div className="titles relative">
             <h1 className="text-2xl xl:text-[80px] font-dmSans font-bold lg:font-extrabold text-[#060606]">
               Digital Marketing Agency in Bangladesh
             </h1>
-            <img src={titleShape.src} alt="title-shape-frame" />
+            <img src={titleShape.src} alt="title-shape-frame" className="absolute -top-2 right-6"/>
           </div>
-          <p className="text-[#65758B] font-normal font-inter text-lg max-w-2xl">
+          <p className="text-[#65758B] font-normal font-inter text-lg max-w-2xl py-6 mb-5">
             Khan IT (led by SEO expert Md Faruk Khan) helps businesses get 150%
             more leads and 2.5x higher conversions through integrated digital
             marketing and web design.
           </p>
-          <Button className={`text-lg`}>Book Your Free Consultation</Button>
+          <Button className={`text-lg `}>Book Your Free Consultation</Button>
         </div>
-        <div className="card-container flex-1">
+        {/* left side card container */}
+        <div className="card-container lg:flex-1">
           {/* card1 and two contaienr */}
           <div className="card-icontainer flex gap-6 items-center">
             {/* cardi */}
