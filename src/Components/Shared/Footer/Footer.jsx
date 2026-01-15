@@ -46,16 +46,16 @@ const Footer = () => {
           {/* About / Logo */}
           <div className="space-y-4 xl:col-span-2">
           
-            <div className="w-40">
+            <div className="w-40 mx-auto lg:mx-0">
               <Link href={'/'}>
               <Image src={logo} 
               alt="Footer Logo" 
               width={200} 
               height={60} 
-              className="object-contain" />
+              className="object-contain text-center lg:text-left" />
               </Link>
             </div>
-            <p className="text-gray-300 text-lg">
+            <p className="text-white text-[16px] mt-6 mb-10 max-w-md mx-auto md:mx-0 text-center lg:text-left">
            Khan IT is a full-stack digital marketing agency 
 in Bangladesh offering complete online marketing, 
 web design, and branding solutions.
@@ -63,7 +63,7 @@ web design, and branding solutions.
             </p>
 
             {/* social */}
-            <ul className="flex items-center gap-3 mt-3">
+            <ul className="flex items-center gap-5 justify-center lg:justify-start mt-4">
             {
                 socialIcon.map((item,i)=><li key={i} className="text-white" >{item.icon}</li>)
             }
@@ -72,10 +72,10 @@ web design, and branding solutions.
 
           {/* Useful Links */}
           <div className="px-6 text-center lg:text-left">
-            <h3 className="text-lg font-semibold mb-4 text-white">Useful Links</h3>
+            <h3 className="text-lg md:text-xl font-semibold mb-6 text-white">Services</h3>
             <ul className="space-y-3">
               {services.map((l) => (
-                <li key={l.title} className="text-gray-100 ">
+                <li key={l.title} className="text-[#ffffff80] text-sm">
                 
                     {l.title}
                 
@@ -86,10 +86,10 @@ web design, and branding solutions.
 
           {/* Support */}
           <div className="text-center lg:text-left">
-            <h3 className="text-lg font-semibold mb-4 text-white">Courses & Support</h3>
+            <h3 className="text-lg md:text-xl font-semibold mb-6 text-white">Company</h3>
             <ul className="space-y-3">
               {company.map((l) => (
-                <li key={l.title} className="text-gray-300">
+                <li key={l.title} className="text-[#ffffff80] text-sm">
                 
                     {l.title}
                  
@@ -100,11 +100,11 @@ web design, and branding solutions.
 
           {/* Contact & Newsletter */}
           <div className="text-center lg:text-left">
-            <h3 className="text-lg font-semibold mb-4 text-white">Contact</h3>
-            <ul className="text-gray-300 space-y-2 mb-4">
-              <li className="flex items-center gap-5"><FiMapPin size={30}/> <span className="text-white font-medium">Dhaka,Bangladesh.</span></li>
-              <li className="flex items-center gap-5"><FiPhone size={30}/> <span className="text-white font-medium">+8801404992727</span></li>
-              <li className="flex items-center gap-5"><MdOutlineMail size={30}/> <a href="mailto:info@example.com" className="">admin@khanit.com.bd</a></li>
+            <h3 className="text-lg md:text-xl font-semibold mb-4 text-white">Contact</h3>
+            <ul className="text-[#ffffff80] text-sm space-y-2 mb-6">
+              <li className="flex items-center justify-center lg:justify-start gap-5"><FiMapPin size={30}/> <span className="text-white font-medium">Dhaka,Bangladesh.</span></li>
+              <li className="flex items-center justify-center lg:justify-start gap-5"><FiPhone size={30}/> <span className="text-white font-medium">+8801404992727</span></li>
+              <li className="flex items-center justify-center lg:justify-start gap-5"><MdOutlineMail size={30}/> <a href="mailto:info@example.com" className="">admin@khanit.com.bd</a></li>
               
             </ul>
 
