@@ -32,14 +32,14 @@ const VideoPlayCard = () => {
         </div>
       </div>
 
-       {/* Bottom Text */}
-            <div className="absolute bottom-3 left-5 text-white">
-              <div className="flex items-center gap-2 mb-1">
-                <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                <span className="font-medium text-sm">Watch Case Study</span>
-              </div>
-              <p className="text-sm font-regular text-[#CCCCCC]">2:45 min</p>
-            </div>
+      {/* Bottom Text */}
+      <div className="absolute bottom-3 left-5 text-white">
+        <div className="flex items-center gap-2 mb-1">
+          <div className="w-2 h-2 bg-red-500 rounded-full"></div>
+          <span className="font-medium text-sm">Watch Case Study</span>
+        </div>
+        <p className="text-sm font-regular text-[#CCCCCC]">2:45 min</p>
+      </div>
     </a>
   );
 };

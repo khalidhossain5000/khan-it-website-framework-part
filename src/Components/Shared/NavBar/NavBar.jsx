@@ -70,6 +70,8 @@ const NavBar = () => {
         {/* mobile menu */}
         <MobileMenu navItems={navItems}></MobileMenu>
       </div>
+
+      
     </header>
   );
 };
