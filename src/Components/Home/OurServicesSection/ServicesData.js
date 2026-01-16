@@ -9,6 +9,10 @@ import brandingIcon from "../../../assets/services/branding.png";
 import uiuxIcon from "../../../assets/services/uiux.png";
 import graphicDesignIcon from "../../../assets/services/graphics.png";
 
+
+
+
+
 const serviceData = [
   {
     title: "SEO Service",

@@ -4,7 +4,7 @@ import statsData from "../StatsData.js";
 import StatsCard from "../StatsCard/StatsCard";
 const StatsSection = () => {
   return (
-    <section className="py-6 lg:py-30 bg-[#F1F5F966] px-2 lg:px-4">
+    <section className="py-6 lg:py-30 bg-[#F1F5F966] px-2 lg:px-4 xl:px-8">
       <div className="container mx-auto ">
         <div className="text-center">
           <p className="bg-[#F0F7FF] py-2 px-4 rounded-4xl text-primary text-sm font-medium inline-block">

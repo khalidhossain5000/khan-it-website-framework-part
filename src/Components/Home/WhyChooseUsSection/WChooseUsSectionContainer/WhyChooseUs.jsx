@@ -4,7 +4,7 @@ import chooseUsData from "../ChooseUsData";
 import ChooseUsCard from "../WhyChooseUsCard/ChooseUsCard";
 const WhyChooseUs = () => {
   return (
-    <section className="py-6 lg:py-30 bg-[#121C39] px-2 lg:px-4">
+    <section className="py-6 lg:py-30 bg-[#121C39] px-2 lg:px-4 xl:px-8">
       <div className="container mx-auto ">
         <div className="text-center">
           <p className="bg-[#0271E833] py-2 px-4 rounded-4xl text-primary text-sm font-medium inline-block">

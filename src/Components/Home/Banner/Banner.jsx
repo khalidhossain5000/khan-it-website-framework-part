@@ -33,14 +33,14 @@ const statsData = [
 ];
 const Banner = () => {
   return (
-    <section className="min-h-screen bg-cover bg-center pt-40 pb-24 md:py-40  lg:py-48  px-2 lg:px-4"   style={{
+    <section className="min-h-screen bg-cover bg-center pt-40 pb-24 md:py-40  lg:py-48  px-2 lg:px-4 xl:px-8"   style={{
     backgroundImage: `url(${bgImg.src})`,
   }}>
       <div className="container mx-auto flex flex-col justify-between lg:flex-row items-center gap-14">
         {/* right side ttitle and usbtitle container */}
         <div className="title-subtitle lg:flex-1 text-center lg:text-left">
           <div className="titles relative">
-            <h1 className="text-4xl md:text-6xl lg:text-5xl xl:text-[80px] font-dmSans font-bold lg:font-extrabold text-[#060606]">
+            <h1 className="text-4xl md:text-6xl lg:text-5xl 2xl:text-[80px] font-dmSans font-bold lg:font-extrabold text-[#060606]">
               Digital Marketing Agency in Bangladesh
             </h1>
             <img src={titleShape.src} alt="title-shape-frame" className="hidden lg:absolute -top-2 right-6"/>

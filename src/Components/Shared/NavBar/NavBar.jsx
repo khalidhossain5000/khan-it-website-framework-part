@@ -38,7 +38,7 @@ const NavBar = () => {
   // sticky code ends
   return (
     <header
-      className={`px-2 lg:px-4 transition duration-300  ${
+      className={`px-2 lg:px-4 xl:px-8 transition duration-300  ${
         isSticky
           ? "fixed top-0 left-0 w-full bg-white lg:bg-slate-100/50  shadow-md lg:backdrop-blur z-50"
           : "lg:bg-transparent py-3 absolute top-0 left-0 w-full"
@@ -72,7 +72,7 @@ const NavBar = () => {
         </nav>
         <div className="btn hidden lg:block">
           <Button className={`font-medium text-xl gap-2`} icon={<FaPhoneAlt />}>
-            +8801404552727
+           +8801404282727
           </Button>
         </div>
         {/* mobile menu */}

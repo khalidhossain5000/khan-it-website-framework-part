@@ -1,4 +1,5 @@
 import Banner from "@/Components/Home/Banner/Banner";
+import ProcessSection from "@/Components/Home/OurProcess/OurProcessContainer/OurProcessSection";
 import OurServices from "@/Components/Home/OurServicesSection/OurServices/OurServices";
 import StatsSection from "@/Components/Home/ResultsStatsSection/StatsContainer/StatsSection";
 import WhyChooseUs from "@/Components/Home/WhyChooseUsSection/WChooseUsSectionContainer/WhyChooseUs";
@@ -12,6 +13,7 @@ const Home = () => {
       <OurServices />
       <WhyChooseUs/>
       <StatsSection/>
+      <ProcessSection/>
     </div>
   );
 };
