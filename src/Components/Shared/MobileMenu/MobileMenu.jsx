@@ -1,16 +1,17 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import { X, Menu, ArrowUpRight } from "lucide-react";
+import { X, Menu, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Button from "../Button/Button";
 import { FaPhoneAlt } from "react-icons/fa";
+import { usePathname } from "next/navigation";
 
 const MobileMenu = ({ navItems }) => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const currentPath = usePathname();
   return (
-    <div>
+    <div className=" lg:hidden">
       {/* Hamburger Icon */}
       <button
         className="p-2 relative z-50"
@@ -24,7 +25,6 @@ const MobileMenu = ({ navItems }) => {
         )}
       </button>
 
-   
       <AnimatePresence>
         {isOpen && (
           <>
@@ -42,42 +42,55 @@ const MobileMenu = ({ navItems }) => {
             {/* Sliding Menu */}
             <motion.div
               key="menu"
-              initial={{ x: "100%" }} // start off-screen to the right
-              animate={{ x: 0 }}      // slide to position
-              exit={{ x: "100%" }}    // slide back when closed
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
               transition={{ type: "tween", duration: 0.4, ease: "easeInOut" }}
               className="fixed top-0 right-0 h-full w-3/4 sm:w-1/2 bg-[#fcfff2] z-50 flex flex-col  p-6 gap-6 shadow-2xl"
             >
               <div>
-              {/* Close Icon */}
-              <div className="flex justify-end">
-                <button
-                  onClick={() => setIsOpen(false)}
-                  className="text-gray-800 dark:text-white p-2"
-                >
-                  <X className="w-6 h-6" />
-                </button>
-              </div>
-
-              {/* Menu Items */}
-              <div className="flex justify-start flex-col gap-3">
-                {navItems.map((item, index) => (
-                  <a
-                    key={index}
-                    href={item.path}
-                    className="text-lg font-medium text-gray-800 dark:text-white hover:text-primary transition-colors duration-200"
+                {/* Close Icon */}
+                <div className="flex justify-end">
+                  <button
                     onClick={() => setIsOpen(false)}
+                    className="text-gray-800 dark:text-white p-2"
                   >
-                    {item.label}
-                  </a>
-                ))}
+                    <X className="w-6 h-6" />
+                  </button>
+                </div>
+
+                {/* Menu Items */}
+                <div className="flex justify-start flex-col gap-3">
+                  {navItems.map((item, i) => {
+                    const isActive = currentPath === item.href;
+                    return (
+                      <li key={i} className="list-none">
+                        <Link
+                          href={item.href}
+                          className={`font-inter font-xl font-[400] flex items-center gap-1 ${
+                            isActive
+                              ? "text-primary font-bold"
+                              : "text-text-primary"
+                          }`}
+                        >
+                          {item.label}
+                          {item.hasDropdown && (
+                            <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
+                          )}
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </div>
               </div>
-</div>
               {/* Auth Buttons */}
               <div>
-            <Button className={`font-medium text-xl gap-2`} icon={<FaPhoneAlt />}>
-                       +8801404552727
-                     </Button>
+                <Button
+                  className={`font-medium text-xl gap-2`}
+                  icon={<FaPhoneAlt />}
+                >
+                  +8801404552727
+                </Button>
               </div>
             </motion.div>
           </>

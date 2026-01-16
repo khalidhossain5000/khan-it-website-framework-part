@@ -7,15 +7,18 @@ import { FaPhoneAlt } from "react-icons/fa";
 import Link from "next/link";
 import Button from "../Button/Button";
 import MobileMenu from "../MobileMenu/MobileMenu";
+import { usePathname } from "next/navigation";
 const NavBar = () => {
   const navItems = [
-    { href: "/home", label: "Home" },
+    { href: "/", label: "Home" },
     { href: "/about", label: "About" },
     { href: "/services", label: "Services", hasDropdown: true },
     { href: "/seo-case-study", label: "SEO Case Study" },
     { href: "/contact", label: "Contact Us" },
   ];
 
+  const currentPath=usePathname()
+ 
   // sticky code statd
   const [isSticky, setIsSticky] = useState(false);
   useEffect(() => {
@@ -47,19 +50,24 @@ const NavBar = () => {
         </div>
         <nav className="menu hidden lg:block">
           <ul className="flex gap-8">
-            {navItems.map((item, i) => (
-              <li key={i} className="">
-                <Link
-                  href={item.href}
-                  className="font-inter font-xl font-[400] flex items-center gap-1 "
-                >
-                  {item.label}
-                  {item.hasDropdown && (
-                    <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
-                  )}
-                </Link>
-              </li>
-            ))}
+            {navItems.map((item, i) => {
+              const isActive = currentPath === item.href;
+              return (
+                <li key={i}>
+                  <Link
+                    href={item.href}
+                    className={`font-inter font-xl font-[400] flex items-center gap-1 ${
+                      isActive ? "text-primary font-bold" : "text-text-primary"
+                    }`}
+                  >
+                    {item.label}
+                    {item.hasDropdown && (
+                      <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />
+                    )}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </nav>
         <div className="btn hidden lg:block">
@@ -68,7 +76,10 @@ const NavBar = () => {
           </Button>
         </div>
         {/* mobile menu */}
+  
+
         <MobileMenu navItems={navItems}></MobileMenu>
+    
       </div>
 
       
