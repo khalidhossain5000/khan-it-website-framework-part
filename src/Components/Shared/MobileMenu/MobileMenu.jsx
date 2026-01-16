@@ -13,11 +13,12 @@ import Button from "../Button/Button";
 const MobileMenu = ({ navItems }) => {
   return (
     <div className="lg:hidden bg-white">
+      
       <Sheet className="bg-white">
         <SheetTrigger asChild>
-          <Button variant="outline">
-            <Menu />
-          </Button>
+          <button className='shadow-sm rounded-lg p-2 ' >
+            <Menu size={30}/>
+          </button>
         </SheetTrigger>
         
         <SheetContent    side="right" className="w-[300px] sm:w-[400px] p-4">
