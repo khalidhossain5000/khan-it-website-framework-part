@@ -40,8 +40,8 @@ const NavBar = () => {
     <header
       className={`px-2 lg:px-4 transition duration-300  ${
         isSticky
-          ? "fixed top-0 left-0 w-full bg-slate-100/50  shadow-md backdrop-blur z-50"
-          : "bg-transparent py-3 absolute top-0 left-0 w-full"
+          ? "fixed top-0 left-0 w-full bg-white lg:bg-slate-100/50  shadow-md lg:backdrop-blur z-50"
+          : "lg:bg-transparent py-3 absolute top-0 left-0 w-full"
       }`}
     >
       <div className="container mx-auto flex items-center justify-between py-4">
@@ -76,9 +76,10 @@ const NavBar = () => {
           </Button>
         </div>
         {/* mobile menu */}
-  
+ 
 
         <MobileMenu navItems={navItems}></MobileMenu>
+
     
       </div>
 

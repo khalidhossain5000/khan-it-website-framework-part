@@ -1,4 +1,4 @@
-# Figma to Next.js Partial Design Implementation
+# Simple website Layout design -----Figma to Next.js Partial Design Implementation
 
 ## Summary
 This project is a partial implementation of a Figma design using **Next.js**. The main goal was to convert the the design into a functional frontend with focus on **pixel accuracy, responsiveness, and clean component structure**.
@@ -6,7 +6,6 @@ This project is a partial implementation of a Figma design using **Next.js**. Th
 
 ## 🚀 Live Site
 https://simple-website-layout-with-framewor.vercel.app/
-
 
 
 The project demonstrates responsive design for both desktop and mobile views.

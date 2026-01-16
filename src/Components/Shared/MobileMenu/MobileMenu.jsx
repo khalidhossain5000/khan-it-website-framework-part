@@ -11,10 +11,10 @@ const MobileMenu = ({ navItems }) => {
   const [isOpen, setIsOpen] = useState(false);
   const currentPath = usePathname();
   return (
-    <div className=" lg:hidden">
+    <div className="z-[99999999999999] lg:hidden">
       {/* Hamburger Icon */}
       <button
-        className="p-2 relative z-50"
+        className="p-2 relative "
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Toggle Menu"
       >
