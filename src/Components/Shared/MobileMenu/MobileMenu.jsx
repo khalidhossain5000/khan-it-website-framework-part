@@ -1,9 +1,10 @@
+'use client'
 import {
   Sheet,
   SheetContent,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet";
+} from "../../ui/sheet";
 import { Menu } from "lucide-react";
 import Link from "next/link";
 import React from "react";
