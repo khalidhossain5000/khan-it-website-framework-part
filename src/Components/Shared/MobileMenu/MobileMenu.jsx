@@ -46,7 +46,7 @@ const MobileMenu = ({ navItems }) => {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "tween", duration: 0.4, ease: "easeInOut" }}
-              className="fixed top-0 right-0 h-full w-3/4 sm:w-1/2 bg-[#fcfff2] z-50 flex flex-col  p-6 gap-6 shadow-2xl"
+              className="fixed top-0 right-0 h-full md:w-3/4 bg-[#fcfff2] z-50 flex flex-col  p-4 md:p-6 gap-6 shadow-2xl w-11/12"
             >
               <div>
                 {/* Close Icon */}

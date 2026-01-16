@@ -10,9 +10,9 @@ import InfoCard from "../InfoCard/InfoCard";
 const InfoSection = () => {
   return (
     <section className="py-6 lg:py-30 bg-[#ffffff] px-2 lg:px-4">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-6">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-15">
         {/* title and content left side */}
-        <div className="flex-2">
+        <div className="flex-6">
         <div className="text-center lg:text-left">
           <p className="bg-[#F0F7FF] py-2 px-4 rounded-4xl text-primary text-sm font-medium inline-block">
             Who We Are
@@ -27,7 +27,7 @@ const InfoSection = () => {
           to help businesses in Bangladesh and beyond achieve measurable growth
           through ethical, data-driven, and Al-powered digital marketing.
         </p>
-        <p className="text-center lg:text-left text-lg font-regular text-[#65758B]">
+        <p className="mt-5 text-center lg:text-left text-lg font-regular text-[#65758B]">
           Our focus remains transparency, strategy, and sustainability. We
           prioritize what matters—your visibility, leads, and long-term brand
           authority. Over the years, we&lsquo;ve supported 200+ businesses
@@ -52,7 +52,7 @@ const InfoSection = () => {
         </div>
 
         {/* card section starts here */}
-        <div className="flex-1">
+        <div className="flex-5">
             {
                 infoData.map((data,i)=><InfoCard
                 key={i}
